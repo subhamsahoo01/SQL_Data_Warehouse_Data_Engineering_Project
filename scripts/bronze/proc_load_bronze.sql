@@ -15,15 +15,7 @@ Usage example:
 ================================================================
 */
 
-IF OBJECT_ID ('bronze.erp_px_cat_g1v2' , 'U') IS NOT NULL
-	DROP TABLE bronze.erp_px_cat_g1v2;
-CREATE TABLE bronze.erp_px_cat_g1v2(
-	id NVARCHAR(50),
-	cat NVARCHAR(50),
-	subcat NVARCHAR(50),
-	maintenance NVARCHAR(50)
-)
-GO
+
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
 BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
